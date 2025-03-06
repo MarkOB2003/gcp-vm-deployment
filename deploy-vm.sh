@@ -15,8 +15,12 @@ STATIC_IP_NAME="my-static-ip"
 echo "Creating static IP address..."
 gcloud compute addresses create $STATIC_IP_NAME --region=${ZONE%-*} --project=$PROJECT_ID
 
-# Get the static IP address
+# Verify static IP creation
 STATIC_IP=$(gcloud compute addresses describe $STATIC_IP_NAME --region=${ZONE%-*} --format="value(address)")
+if [ -z "$STATIC_IP" ]; then
+  echo "Error: Failed to create or retrieve static IP address."
+  exit 1
+fi
 
 # Step 2: Create the VM instance
 echo "Creating VM instance..."
@@ -28,12 +32,26 @@ gcloud compute instances create $INSTANCE_NAME \
     --tags=http-server,https-server \
     --address=$STATIC_IP
 
+# Verify VM creation
+VM_STATUS=$(gcloud compute instances describe $INSTANCE_NAME --zone=$ZONE --format="value(status)")
+if [ "$VM_STATUS" != "RUNNING" ]; then
+  echo "Error: Failed to create VM instance."
+  exit 1
+fi
+
 # Step 3: Configure firewall rules
 echo "Configuring firewall rules..."
 gcloud compute firewall-rules create $FIREWALL_RULE_NAME \
     --project=$PROJECT_ID \
     --allow=tcp:80,tcp:22 \
     --target-tags=http-server,https-server
+
+# Verify firewall rule creation
+FIREWALL_EXISTS=$(gcloud compute firewall-rules list --filter="name=$FIREWALL_RULE_NAME" --format="value(name)")
+if [ -z "$FIREWALL_EXISTS" ]; then
+  echo "Error: Failed to create firewall rule."
+  exit 1
+fi
 
 # Output the details
 echo "VM instance created successfully!"
