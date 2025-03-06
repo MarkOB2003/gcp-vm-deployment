@@ -2,7 +2,7 @@
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/your-username/gcp-vm-deployment.git
+   git clone https://github.com/MarkOB2003/gcp-vm-deployment.git
    cd gcp-vm-deployment
    ```
    
