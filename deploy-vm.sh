@@ -1,4 +1,5 @@
 #!/bin/bash
+set -x  # Enable debugging
 
 # Variables
 PROJECT_ID="cloud-vm-project-452819"
@@ -10,6 +11,12 @@ IMAGE_FAMILY="ubuntu-2004-lts"
 IMAGE_PROJECT="ubuntu-os-cloud"
 FIREWALL_RULE_NAME="allow-http-ssh"
 STATIC_IP_NAME="my-static-ip"
+
+# Check if gcloud is installed
+if ! command -v gcloud &> /dev/null; then
+  echo "Error: gcloud CLI is not installed. Please install Google Cloud SDK."
+  exit 1
+fi
 
 # Step 1: Create a static external IP address
 echo "Creating static IP address..."
