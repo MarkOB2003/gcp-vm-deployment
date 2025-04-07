@@ -51,7 +51,7 @@ Before runing the script, do the following:
    git clone https://github.com/MarkOB2003/gcp-vm-deployment.git
    cd gcp-vm-deployment
    ```
-2. Be sure to change the PROJECT_ID in the script to the name of your PROJECT_ID
+2. Be sure to change the PROJECT_ID in the script to the name of your PROJECT_ID if needed
 
    
 **Git Bash for Linux commands**
