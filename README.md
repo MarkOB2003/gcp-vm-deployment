@@ -130,15 +130,7 @@ Replace "my-vm-instance" and "us-central1-a" with your VM name and zone.
 4. **VM Not Accessible**:
    - Verify the VM is running in the Google Cloud Console.
    - Check the external IP address and ensure it is correct.
-  
 
+5. Can't connect API Services:
+   - Make sure it is connected to a billable account.
 
-## Google Cloud Console Setup
-1. Create a Google Cloud Project in the Google Cloud Console
-   - (https://console.cloud.google.com)
-
-2. Enable the necessary APIs:
-   - Search for and enable the following APIs:
-      Compute Engine API (for VM deployment).
-      IAM API (for managing permissions).
-   - Click Enable for each API.
