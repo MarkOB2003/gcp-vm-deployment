@@ -1,26 +1,3 @@
-## Instructions for Running the Script
-
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/MarkOB2003/gcp-vm-deployment.git
-   cd gcp-vm-deployment
-   ```
-   
-2. **Make the script executable**:
-    ```bash
-   chmod +x deploy-vm.sh
-   ```
-
-3. **Run the script**:
-    ```bash
-   ./deploy-vm.sh
-   ```
-
-4. **Verify the deployment**:
-    Check the Google Cloud Console to ensure the VM is running.
-    Access the "Hello World" webpage at http://<VM-EXTERNAL-IP>.
-
-
 ## Prerequisites
 
 Before running the script, ensure the following:
@@ -60,6 +37,27 @@ Before running the script, ensure the following:
 3. **Webpage**:
    - A "Hello World" webpage will be hosted on the VM and accessible at `http://<VM-EXTERNAL-IP>`.
 
+## Instructions for Running the Script
+
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/MarkOB2003/gcp-vm-deployment.git
+   cd gcp-vm-deployment
+   ```
+   
+2. **Make the script executable**:
+    ```bash
+   chmod +x deploy-vm.sh
+   ```
+
+3. **Run the script**:
+    ```bash
+   ./deploy-vm.sh
+   ```
+
+4. **Verify the deployment**:
+    Check the Google Cloud Console to ensure the VM is running.
+    Access the "Hello World" webpage at http://<VM-EXTERNAL-IP>.
 
 ## Troubleshooting
 
