@@ -131,6 +131,6 @@ Replace "my-vm-instance" and "us-central1-a" with your VM name and zone.
    - Verify the VM is running in the Google Cloud Console.
    - Check the external IP address and ensure it is correct.
 
-5. Can't connect API Services:
+5. **Can't connect API Services**:
    - Make sure it is connected to a billable account.
 
