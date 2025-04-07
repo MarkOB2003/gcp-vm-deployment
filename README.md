@@ -18,25 +18,6 @@ Before running the script, ensure the following:
      gcloud services enable compute.googleapis.com iam.googleapis.com
      ```
 
-## Expected Output
-
-1. **Script Execution**:
-   - The script will output the following:
-     ```
-     VM instance created successfully!
-     Instance Name: my-vm-instance
-     Static IP: <VM-EXTERNAL-IP>
-     Zone: us-central1-a
-     ```
-
-2. **VM Deployment**:
-   - A VM instance with 2 vCPUs, 8GB RAM, and 250GB disk will be created.
-   - A static IP address will be assigned to the VM.
-   - Firewall rules will allow HTTP (port 80) and SSH (port 22) access.
-
-3. **Webpage**:
-   - A "Hello World" webpage will be hosted on the VM and accessible at `http://<VM-EXTERNAL-IP>`.
-
 ## Instructions for Running the Script
 
 1. **Clone the Repository**:
@@ -58,6 +39,25 @@ Before running the script, ensure the following:
 4. **Verify the deployment**:
     Check the Google Cloud Console to ensure the VM is running.
     Access the "Hello World" webpage at http://<VM-EXTERNAL-IP>.
+
+## Expected Output
+
+1. **Script Execution**:
+   - The script will output the following:
+     ```
+     VM instance created successfully!
+     Instance Name: my-vm-instance
+     Static IP: <VM-EXTERNAL-IP>
+     Zone: us-central1-a
+     ```
+
+2. **VM Deployment**:
+   - A VM instance with 2 vCPUs, 8GB RAM, and 250GB disk will be created.
+   - A static IP address will be assigned to the VM.
+   - Firewall rules will allow HTTP (port 80) and SSH (port 22) access.
+
+3. **Webpage**:
+   - A "Hello World" webpage will be hosted on the VM and accessible at `http://<VM-EXTERNAL-IP>`.
 
 ## Troubleshooting
 
