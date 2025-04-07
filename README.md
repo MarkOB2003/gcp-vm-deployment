@@ -41,7 +41,7 @@ Before runing the script, do the following:
    ```bash
    gcloud services list --enabled
    ```
-7. Be sure to change the PROJECT_ID in the script to the name of your PROJECT_ID
+
 
 
 ## Instructions for Running the Script
@@ -51,7 +51,9 @@ Before runing the script, do the following:
    git clone https://github.com/MarkOB2003/gcp-vm-deployment.git
    cd gcp-vm-deployment
    ```
+2. Be sure to change the PROJECT_ID in the script to the name of your PROJECT_ID
 
+   
 **Git Bash for Linux commands**
 1. In the Git Bash terminal, navigate to where you have saved the script and run this command to make the script excecutable:
    ```bash
