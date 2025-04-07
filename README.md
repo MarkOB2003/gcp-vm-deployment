@@ -74,7 +74,7 @@ Before runing the script, do the following:
    
 Back in SDK Console run:
    ```bash
-   gcloud compute ssh my-vm-instance --zone=us-central1-a
+   gcloud compute ssh my-vm-instance --zone=us-east1-b
    ```
 Replace "my-vm-instance" and "us-central1-a" with your VM name and zone.
 
